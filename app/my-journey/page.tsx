@@ -59,19 +59,10 @@ const Profile = async () => {
         </div>
       </section>
       <Accordion type="multiple">
-        <AccordionItem value="bookmarks">
-          <AccordionTrigger className="text-2xl font-bold">
-            Bookmarked Companions
-          </AccordionTrigger>
-          <AccordionContent>
-            <CompanionsList
-              title="Bookmarked Companions"
-            />
-          </AccordionContent>
-        </AccordionItem>
+        
         <AccordionItem value="recent">
           <AccordionTrigger className="text-2xl font-bold">
-            Recent Sessions
+            Recent Sessions {`(${sessionHistory.length})`}
           </AccordionTrigger>
           <AccordionContent>
             <CompanionsList
