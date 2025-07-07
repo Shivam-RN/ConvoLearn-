@@ -22,6 +22,7 @@ const Profile = async () => {
   const companions = await getUserCompanions(user.id);
   const sessionHistory = await getUserSessions(user.id);
   const bookmarkedCompanions = await getBookmarkedCompanions(user.id);
+  
 
   return (
     <main className="min-lg:w-3/4">

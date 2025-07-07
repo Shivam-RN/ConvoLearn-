@@ -180,4 +180,15 @@ export const getBookmarkedCompanions = async (userId: string) => {
   return data.map(({ companions }) => companions);
 };
 
+export const getBookmarkedIds = async (userId: string) => {
+  const supabase = createSupabaseClient();
+  const { data, error } = await supabase
+    .from("bookmarks")
+    .select("companion_id")
+    .eq("user_id", userId);
+
+  if (error) throw new Error(error.message);
+  return data.map((item) => item.companion_id);
+};
+
 
