@@ -7,14 +7,15 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Link href="/">
-                <div className="flex items-center gap-2.5 cursor-pointer">
-                    <Image
-                        src="/images/logo.svg"
-                        alt="logo"
-                        width={46}
-                        height={54}
-                    />
-                </div>
+<div className="hidden sm:flex items-center gap-3 cursor-pointer">
+  <Image
+    src="/images/logo.svg"
+    alt="logo"
+    width={120}
+    height={140}
+  />
+</div>
+
             </Link>
             <div className="flex items-center gap-10">
                 <NavItems />
